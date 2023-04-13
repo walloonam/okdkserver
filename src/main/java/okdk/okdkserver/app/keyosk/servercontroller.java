@@ -35,13 +35,6 @@ public class servercontroller {
         //인식 결과 내보내기
         return result;
     }
-    @GetMapping(value = "/server/image/test")
-    public String saveImagetest() throws IOException {
-        PythonSocketForRecognization python_test_class = new PythonSocketForRecognization();
-        String result = python_test_class.face_recognize_result("hi");
-        System.out.println(result);
-        return "ok";
-    }
 
     @PostMapping(value = "/arduino/json")
     public void arduninoSignal(@RequestBody arduinoRequest ArduinoRequest){
